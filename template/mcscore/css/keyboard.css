@@ -1,0 +1,16 @@
+#keyboard .header { height: 0.9rem; padding: 10px 0;}
+
+#keyboard .control { width: 100%; position: absolute; top: 10px;}
+#keyboard .miniature { margin: 0 auto; position: relative; width: 11.93rem;}
+#keyboard .last_octave, #keyboard .last_note { float: left; margin-right: 10px;}
+#keyboard .next_note, #keyboard .next_octave { float: right; margin-left: 10px;}
+#keyboard .miniature .mask { background-color: #9bcfe7; opacity: 0.4; position: absolute; }					  
+#keyboard .miniature .mask.left { left: 0; }
+#keyboard .miniature .mask.right { right: 0; }	
+
+#keyboard .keys_area { margin-top: 6px; position: relative; box-sizing: border-box;}
+#keyboard .keyBox { position: absolute; display: inline-block; padding: 0 1px 1px 1px;}
+#keyboard .key_white { display: inline-block; width: 100%; height: 100%; z-index: 1; position: relative;}
+#keyboard .key_black { position: absolute; z-index: 2;}		
+
+#keyboard .keyname { position: absolute; width: 100%; text-align: center; display: none; font-size: 0.36rem; bottom: 0.36rem;}

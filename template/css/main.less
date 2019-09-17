@@ -1,0 +1,56 @@
+@r: 50rem;
+
+body {
+  position: relative;
+}
+
+.bg_brown {
+  background-color: #552E4D;
+}
+
+.bg_red {
+  background-color: #D4145A;
+}
+
+.cd {
+  position: fixed;
+  font-size: 128px;
+  color: #ffaa3b;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.bg_mask {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #777;
+  z-index: 1000;
+  opacity: 0.5;
+  -moz-opacity: 0.5;
+  filter: alpha(opacity=60);
+}
+
+.btn_back {
+  position: absolute;
+  width: 192/@r;
+  height: 100/@r;
+  background: url(../img/btn_back.png) no-repeat center;
+  background-size: 32/@r 67/@r;
+  top: 34/@r;
+  left: 0;
+}
+
+.logo {
+  position: absolute;
+  width: 156/@r;
+  height: 54/@r;
+  background: url("../img/logo.png") no-repeat center;
+  background-size: 100% 100%;
+  top: 56/@r;
+  right: 40/@r;
+}

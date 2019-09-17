@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>节拍器Demo</title>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+		<script type="text/javascript" src="js/BufferLoader.js" ></script>
+		<script type="text/javascript" src="js/McMetronome.js" ></script>
+		<script type="text/javascript" src="js/metronomeDemo.js" ></script>
+		
+		<link rel="stylesheet" href="css/metronome.css" />
+	</head>
+	<body>
+		<div class="group">
+			<label for="bpmChoose">bpm: </label>
+			<input id="bpmChoose" type="range" min="30" max="260" step="1" value="120"/>
+			<span id="speed">1</span>
+		</div>
+		<div class="group">
+			<select class="option" id="fontSelect">
+				<!-- 音色列表 -->
+			</select>
+			
+			<select class="option" id="rhythmSelect">
+				<option value="2">2/4</option>
+				<option value="3">3/4</option>
+				<option value="4" selected="selected">4/4</option>
+			</select>
+		</div>
+		<div class="group">
+			<button class="btn play_btn" id='playButton'>Play</button>
+			<span class="indicator"></span>
+		</div>
+	</body>
+</html>

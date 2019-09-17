@@ -1,0 +1,53 @@
+@r : 50rem;
+
+#levels {
+  overflow-y: hidden;
+  height: 100%;
+
+  background: url(../img/background.png) no-repeat center;
+  background-size: 100% 100%;
+
+  .wrapper {
+    margin: 0 auto;
+    width: 780/@r;
+  }
+
+  .rounded_rectangle {
+    width: 100%;
+    height: 88/@r;
+    line-height: 88/@r;
+    border-radius: 44/@r;
+    color: #fff;
+    text-align: center;
+    font-size: 36/@r;
+    box-sizing: border-box;
+  }
+
+  .header {
+    padding: 100/@r 0;
+  }
+
+  .content {
+    overflow-y: auto;
+    height: 65%;
+    ul {
+      overflow: hidden;
+    }
+    li {
+      margin-bottom: 50/@r;
+    }
+    a {
+      display: block;
+      color: #fff;
+      padding-left: 170/@r;
+      text-align: left;
+    }
+    .level {
+      margin-right: 50/@r;
+    }
+  }
+
+  .content::-webkit-scrollbar {
+    display: none;
+  }
+}

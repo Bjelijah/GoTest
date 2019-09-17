@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8"/>
+  <title>乐谱</title>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="mcscore/js/McAudioPlayer.js"></script>
+  <script type="text/javascript" src="mcscore/js/bufferaudio.js"></script>
+  <script type="text/javascript" src="mcscore/js/McAudioContext.js"></script>
+  <script type="text/javascript" src="mcscore/js/McMidiPlayer.js"></script>
+  <script type="text/javascript" src="mcscore/js/BufferLoader.js"></script>
+  <script type="text/javascript" src="mcscore/js/McMetronome.js"></script>
+  <script type="text/javascript" src="mcscore/js/McJsBridge.js"></script>
+  <script type="text/javascript" src="mcscore/js/McScore.js"></script>
+  <script type="text/javascript" src="mcscore/js/McCountDown.js"></script>
+  <script type="text/javascript" src="js/WebAudioFontPlayer.js"></script>
+  <script type="text/javascript" src="js/0010_Chaos_sf2_file.js"></script>
+
+  <link rel="stylesheet" href="mcscore/css/keyboard.css"/>
+  <link rel="stylesheet" href="mcscore/css/theme_real.css"/>
+
+  <link rel="stylesheet" href="css/cs-select.css"/>
+  <link rel="stylesheet" href="css/cs-skin-elastic.css"/>
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/main.css"/>
+  <link rel="stylesheet" href="css/toolbar.css"/>
+  <link rel="stylesheet" href="css/score.css"/>
+
+  <script type="text/javascript" src="mcscore/js/BufferLoader.js"></script>
+  <script type="text/javascript" src="mcscore/js/pianoSource.js"></script>
+  <script type="text/javascript" src="mcscore/js/McKeyboard.js"></script>
+  <script type="text/javascript" src="mcscore/js/McKeyboardView.js"></script>
+
+  <script type="text/javascript" src="js/McScoreKeeper.js"></script>
+  <script type="text/javascript" src="js/classie.js"></script>
+  <script type="text/javascript" src="js/selectFx.js"></script>
+  <script type="text/javascript" src="js/util.js"></script>
+  <script type="text/javascript" src="js/McClass.js"></script>
+  <script type="text/javascript" src="js/score.js"></script>
+</head>
+
+<body id="scorePage">
+<div class="header">
+  <div class="toolbar">
+    <div class="buttons">
+      <div class="toolbtn">
+        <button class="btn_play" id="audioPlay"></button>
+        <span>播放</span>
+      </div>
+      <div class="toolbtn">
+        <button class="toolbtn btn_restart" id="audioRestart"></button>
+        <span>重新开始</span>
+      </div>
+      <div class="toolbtn">
+        <button class="toolbtn btn_speed" id="bpmChange"></button>
+        <span>速度调整</span>
+      </div>
+
+      <div class="select toolbtn hands">
+        <div class="toolbtn">
+          <button class="btn_hands"></button>
+          <span>左右手</span>
+        </div>
+        <select class="cs-select cs-skin-elastic" id="hands" style="display: none;">
+          <option value="left">左手</option>
+          <option value="right">右手</option>
+          <option value="both" selected>双手</option>
+        </select>
+      </div>
+
+      <div class="select toolbtn modes">
+        <div class="toolbtn">
+          <button class="toolbtn btn_mode"></button>
+          <span>弹奏模式</span>
+        </div>
+        <select class="cs-select cs-skin-elastic" id="modes" style="display: none;">
+          <option value="listen" selected>欣赏</option>
+          <option value="follow">跟弹</option>
+          <option value="waitFollow">识谱</option>
+          <option value="pk">竞赛</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="panel_loop">
+      <div class="progress">
+        <span class="progress_current" id="current"></span>
+        <span class="progress_loop" id="loop"></span>
+        <span class="indicate" id="indicate"></span>
+      </div>
+      <div class="abloop">
+        <button class="btn_no" id="audioLoop"></button>
+        <button class="btn_cancel" id="cancelLoop">取 消</button>
+      </div>
+    </div>
+
+    <div class="panel_speed">
+      <span class="speed">曲谱速度<br/><span id="bpm"></span></span>
+      <span class="reduce" id="bpmReduce"></span>
+      <span class="range"><input id="bpmRange" type="range" value="120" min="30" max="260" step="1"/></span>
+      <span class="raise" id="bpmRaise"></span>
+    </div>
+
+    <div class="connection">
+      <span class="connect" id="connect"></span>
+      <span class="disconnect" id="disconnect"></span>
+    </div>
+
+  </div>
+</div>
+
+<div class="main">
+  <div class="score" id="score">
+  </div>
+
+  <div class="keyboard_area">
+    <div class="keyboard theme_real" id="keyboard"></div>
+  </div>
+
+  <button class="btn_keyboard open" id="keyboardBtn"></button>
+</div>
+
+<div id="mask" class="bg_mask"></div>
+<div id="cd" class="cd"></div>
+</body>
+
+</html>

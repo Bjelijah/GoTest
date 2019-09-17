@@ -1,0 +1,331 @@
+.toolbar {
+  width: 100%;
+}
+.toolbar .buttons {
+  position: absolute;
+  width: 18rem;
+  right: 1.68rem;
+  top: 0.32rem;
+  display: flex;
+  justify-content: space-between;
+}
+.toolbar .toolbtn {
+  width: 2.4rem;
+  height: 1.92rem;
+  z-index: 1000;
+}
+.toolbar .toolbtn button {
+  width: 100%;
+  height: 1.4rem;
+}
+.toolbar .toolbtn span {
+  display: inline-block;
+  width: 100%;
+  font-size: 0.44rem;
+  color: #454545;
+  text-align: center;
+}
+.toolbar .toolbtn.disable {
+  opacity: 0.7;
+}
+.toolbar .select {
+  float: left;
+  position: relative;
+}
+.toolbar .select .cs-skin-elastic .cs-options {
+  position: relative;
+  width: 3.84rem;
+  left: -0.92rem;
+  background: url(../img/dropdown_subsidiary.png) no-repeat center top;
+  background-size: 0.5rem 0.36rem;
+  overflow: visible;
+}
+.toolbar .select .cs-skin-elastic .cs-options > ul::before {
+  background: #262556;
+  border-radius: 0.6rem;
+  top: 0.36rem;
+  height: calc(95%);
+}
+.toolbar .select ul {
+  padding: 0 0.4rem;
+  padding-top: 0.36rem;
+  box-sizing: border-box;
+}
+.toolbar .select li {
+  height: 1.6rem;
+  line-height: 1.6rem;
+  border-bottom: 2px solid #c6185a;
+  font-size: .4rem;
+}
+.toolbar .select li span {
+  color: #ffffff;
+  box-sizing: border-box;
+}
+.toolbar .select li:last-child {
+  border: none;
+}
+.toolbar .select .cs-selected span {
+  color: #D4354F;
+}
+.toolbar .hands li:nth-of-type(1) span:before {
+  background: url(../img/icon_lefthand.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .hands li:nth-of-type(1).cs-selected span:before {
+  background: url(../img/icon_lefthand_highlight.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .hands li:nth-of-type(2) span:before {
+  background: url(../img/icon_righthand.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .hands li:nth-of-type(2).cs-selected span:before {
+  background: url(../img/icon_righthand_highlight.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .hands li:nth-of-type(3) span:before {
+  background: url(../img/icon_bothhands.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .hands li:nth-of-type(3).cs-selected span:before {
+  background: url(../img/icon_bothhands_highlight.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .modes li:nth-of-type(1) span:before {
+  background: url(../img/icon_enjoy.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .modes li:nth-of-type(1).cs-selected span:before {
+  background: url(../img/icon_enjoy_highlight.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .modes li:nth-of-type(2) span:before {
+  background: url(../img/icon_follow.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .modes li:nth-of-type(2).cs-selected span:before {
+  background: url(../img/icon_follow_highlight.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .modes li:nth-of-type(3) span:before {
+  background: url(../img/icon_reading.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .modes li:nth-of-type(3).cs-selected span:before {
+  background: url(../img/icon_reading_highlight.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .modes li:nth-of-type(4) span:before {
+  background: url(../img/icon_contest.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .modes li:nth-of-type(4).cs-selected span:before {
+  background: url(../img/icon_contest_highlight.png) no-repeat center;
+  background-size: contain;
+}
+.toolbar .panel_loop {
+  width: 24rem;
+  height: 1.28rem;
+  position: absolute;
+  top: 3.2rem;
+  left: 4.4rem;
+}
+.toolbar .panel_loop .progress {
+  width: 100%;
+  height: 0.2rem;
+  background-color: #A4A39F;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  top: 0.56rem;
+}
+.toolbar .panel_loop .progress .progress_loop {
+  position: absolute;
+  height: 100%;
+  background-color: #f2c939;
+  border-radius: 5px;
+}
+.toolbar .panel_loop .progress .progress_current {
+  position: absolute;
+  height: 100%;
+  left: 0;
+  background-color: #5F6083;
+  border-radius: 5px;
+}
+.toolbar .panel_loop .progress .indicate {
+  position: absolute;
+  width: 0.72rem;
+  height: 0.72rem;
+  top: -0.28rem;
+  left: 0;
+  border-radius: 50%;
+  background-color: #D4354F;
+}
+.toolbar .panel_loop .abloop {
+  width: 2.4rem;
+  position: absolute;
+  right: -4.4rem;
+}
+.toolbar .panel_loop .abloop button {
+  width: 2.4rem;
+  height: 1.24rem;
+}
+.toolbar .panel_loop .abloop .btn_no {
+  background: url(../img/btn_loop_no.png) no-repeat;
+  background-size: 2.4rem 1.24rem;
+}
+.toolbar .panel_loop .abloop .btn_a {
+  background: url(../img/btn_loop_a.png) no-repeat;
+  background-size: 2.4rem 1.24rem;
+}
+.toolbar .panel_loop .abloop .btn_ab {
+  background: url(../img/btn_loop_ab.png) no-repeat;
+  background-size: 2.4rem 1.24rem;
+}
+.toolbar .panel_loop .abloop .btn_cancel {
+  display: none;
+  line-height: 1.24rem;
+  font-size: 0.5rem;
+  color: #FFFFFF;
+  border-radius: 0.66rem;
+  background-color: #6a634c;
+  opacity: 0.7;
+  -moz-opacity: 0.9;
+  filter: alpha(opacity=70);
+  margin-top: 5px;
+}
+.toolbar .panel_speed {
+  display: none;
+  width: 33.4rem;
+  height: 1.8rem;
+  position: absolute;
+  left: 2.6rem;
+  top: 3.08rem;
+  background: #DBF0FE;
+  border-radius: 0.6rem;
+  padding: 0.32rem 0;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+.toolbar .panel_speed .speed {
+  float: left;
+  font-size: 0.52rem;
+  color: #262556;
+  margin-left: 1.12rem;
+  margin-right: 1.32rem;
+  text-align: center;
+  display: block;
+  min-width: 2.4rem;
+}
+.toolbar .panel_speed .speed span {
+  margin-top: 0.2rem;
+  display: block;
+}
+.toolbar .panel_speed .reduce {
+  float: left;
+  width: 0.84rem;
+  height: 100%;
+  margin-right: 0.6rem;
+  background: url(../img/icon_speed_reduce.png) no-repeat center;
+  background-size: 0.84rem 0.84rem;
+}
+.toolbar .panel_speed .range {
+  float: left;
+  width: 22rem;
+  height: 100%;
+  padding-top: 0.48rem;
+  box-sizing: border-box;
+}
+.toolbar .panel_speed .range input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 0.2rem;
+  border-radius: 0.1rem;
+  background: -webkit-linear-gradient(#262556, #262556) no-repeat, #262556;
+  background-size: 30% 100%;
+  /*设置左右宽度比例*/
+}
+.toolbar .panel_speed .range input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0.72rem;
+  height: 0.72rem;
+  border-radius: 50%;
+  background-color: #262556;
+}
+.toolbar .panel_speed .raise {
+  float: left;
+  width: 0.84rem;
+  height: 100%;
+  margin-left: 0.6rem;
+  background: url(../img/icon_speed_raise.png) no-repeat center;
+  background-size: 0.84rem 0.84rem;
+}
+.toolbar .connection {
+  position: absolute;
+  width: 2.4rem;
+  height: 1.24rem;
+  top: 3.2rem;
+  right: 2rem;
+}
+.toolbar .connection span {
+  display: inline-block;
+  width: 2.4rem;
+  height: 1.24rem;
+}
+.toolbar .connection .connect {
+  display: none;
+  background: url(../img/btn_connect.png) no-repeat;
+  background-size: 2.4rem 1.24rem;
+}
+.toolbar .connection .disconnect {
+  background: url(../img/btn_disconnect.png) no-repeat;
+  background-size: 2.4rem 1.24rem;
+}
+.btn_play {
+  background: url(../img/btn_play.png) no-repeat center top;
+  background-size: 1.2rem 1.2rem;
+}
+.btn_pause {
+  background: url(../img/btn_pause.png) no-repeat center top;
+  background-size: 1.2rem 1.2rem;
+}
+.btn_restart {
+  background: url(../img/btn_restart.png) no-repeat center top;
+  background-size: 1.2rem 1.2rem;
+}
+.btn_speed {
+  background: url(../img/btn_speed.png) no-repeat center top;
+  background-size: 1.2rem 1.2rem;
+}
+.btn_mode {
+  background: url(../img/btn_mode.png) no-repeat center top;
+  background-size: 1.2rem 1.2rem;
+}
+.btn_hands {
+  background: url(../img/btn_hands.png) no-repeat center top;
+  background-size: 1.2rem 1.2rem;
+}
+.btn_play.active {
+  background: url(../img/btn_play.png) no-repeat center top;
+  background-size: 1.2rem 1.2rem;
+}
+.btn_pause.active {
+  background: url(../img/btn_pause.png) no-repeat center top;
+  background-size: 1.2rem 1.2rem;
+}
+.btn_restart.active {
+  background: url(../img/btn_restart_highlight.png) no-repeat center top;
+  background-size: 1.2rem 1.2rem;
+}
+.btn_speed.active {
+  background: url(../img/btn_speed_highlight.png) no-repeat center top;
+  background-size: 1.2rem 1.2rem;
+}
+.btn_mode.active {
+  background: url(../img/btn_mode_highlight.png) no-repeat center top;
+  background-size: 1.2rem 1.2rem;
+}
+.btn_hands.active {
+  background: url(../img/btn_hands_highlight.png) no-repeat center top;
+  background-size: 1.2rem 1.2rem;
+}

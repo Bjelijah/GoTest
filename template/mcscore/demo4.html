@@ -1,0 +1,433 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+    <head>  
+        <meta charset="utf-8" />  
+        <title>McScore </title>  
+        <link rel="stylesheet" type="text/css" href="css/score.css?t=sfasas" />
+        <script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>  
+        <script type="text/javascript" src="./js/McAudioPlayer.js?t=3444"></script>  
+        <script type="text/javascript" src="./js/bufferaudio.js?t=ssdfd3"></script>  
+        <script type="text/javascript" src="./js/McAudioContext.js?t=fssfd4"></script>  
+        <script type="text/javascript" src="./js/McMidiPlayer.js?t=23sd53"></script>
+        <script type="text/javascript" src="js/BufferLoader.js" ></script>
+        <script type="text/javascript" src="./js/McMetronome.js?t=sdf" ></script>
+        <script type="text/javascript" src="./js/McJsBridge.js?t=343"></script>          
+        <script type="text/javascript" src="./js/McScore.js?t=sdfsdffdsdffs"></script>  
+        <script type="text/javascript" src="./js/McCountDown.js" ></script>
+		<link rel="stylesheet" href="./css/cd.css?t=3453sd4" />
+    </head>  
+    <body  style="background-color: #cccc99"> 
+	    <script type="text/javascript">
+		    var jsBridge = null;
+		    var scoreId = -1;
+		    var player = null;
+	        var mcScore = null;
+	        var countdown = null;
+	        var curNote = null;
+			var noteA = null;
+			var noteB = null;
+			var isLoop = false;
+			
+	        $(function () { 
+		        scoreId = GetQueryString("id");
+
+			    var option = {
+				    enableJsBridge: true,
+				    onNoteClick : onNoteClick,  //绑定用户点击某个音符后执行的回调，设定AB循环时要用这个
+				    onNoteOn:onNoteOn,          //绑定某个音符触发(开始发声)后执行的回调，与seek方法配合可实现任意区间循环
+				    onNoteOff:onNoteOff,
+				    onError:onError,
+				    onReady: onScoreReady,      //绑定乐谱资源加载完毕后执行的回调
+				    onFinish: onFinish
+			    };
+		        mcScore = McScore.createNew(option);
+			    
+				//mcScore.enableMetronome(true);
+			    mcScore.init(scoreId);
+			    mcScore.setMarginTop(200);
+				countdown = McCountDown.createNew();
+				
+
+	        });
+
+						
+			function onScoreReady(){	
+				$('#audioPlay').click(function(){
+					showMask();
+					
+					play();
+					//alert(mcScore.getBPM());
+				});
+				
+			    $('#audioPause').click(function(){
+				    $("#audioPlay").show();
+					$("#audioPause").hide();
+				    mcScore.pause();
+				    $('#audioWaitMode').show(); 
+				    $('#audioPlayMode').show(); 
+				    $('#audioRestart').show(); 
+					$('#audioLeft').show();
+					$('#audioRight').show();
+					$('#audioLeftRight').show();
+					setLoopButton();					
+			    });
+
+			    $('#audioRestart').click(function(){
+				    showMask();
+				    cancelLoop();
+				    mcScore.stop();
+					setTimeout(function(){
+							play();
+							setLoopButton();
+						},500);
+			    });
+
+			    $('#audioRestart2').click(function(){
+				    cancelLoop();
+				    mcScore.stop();
+					setTimeout(function(){
+							mcScore.play();
+							setLoopButton();
+						},500);
+			    });
+				
+			    $('#audioSpeedUp').click(function(){
+				   mcScore.setBPM(mcScore.getBPM()+20); 
+			    });
+
+			    $('#audioSpeedDown').click(function(){
+				   mcScore.setBPM(mcScore.getBPM()-20); 
+			    });
+			    
+			    $('#audioLeft').click(function(){
+				   $(this).css('color', "red");
+				   $('#audioRight').css('color', "black");
+				   $('#audioLeftRight').css('color', "black");
+				   mcScore.disableStaff(0); 
+			    });
+			    
+			    $('#audioRight').click(function(){
+				   $(this).css('color', "red");
+				   $('#audioLeft').css('color', "black");
+				   $('#audioLeftRight').css('color', "black");
+				   mcScore.disableStaff(1); 
+			    });
+			    
+			    $('#audioLeftRight').click(function(){
+				   $(this).css('color', "red");
+				   $('#audioLeft').css('color', "black");
+				   $('#audioRight').css('color', "black");
+				   mcScore.disableStaff(-1); 
+			    });
+			    
+			    $('#audioNoteA').click(function(){
+				    if(curNote == null){
+					    alert("请点击选择一个音符");
+					    return;
+				    }
+				    
+				    if(noteB != null) {
+				    	if(noteB.id == curNote.id){
+					        alert("不能与B点相同");
+					        return;
+					    }
+					    if(curNote.ontick > noteB.ontick){
+						    alert("B点不能小于A点");
+					        return;
+					    }
+				    }
+				    
+				    $(this).css('color', "red");
+					noteA = curNote;
+				    
+				    if(noteB != null){
+						$('#audioLoop').removeAttr("disabled"); 
+				    }
+				    mcScore.setA(noteA);
+			    });
+
+			    $('#audioNoteB').click(function(){
+				    if(curNote == null){
+					    alert("请点击选择一个音符");
+					    return;
+				    }
+				    if(noteA != null){
+					    if(noteA.id == curNote.id){
+					        alert("不能与A点相同");
+					        return;
+					    }
+					    if(noteA.ontick > curNote.ontick){
+						    alert("B点不能小于A点");
+					        return;
+					    }
+				    }
+				    
+				    
+				    $(this).css('color', "red");
+					noteB = curNote;
+				    
+				    if(noteA != null){
+						$('#audioLoop').removeAttr("disabled"); 
+				    }
+				    mcScore.setB(noteB);
+			    });
+			    
+			    
+			    $('#audioLoop').click(function(){
+				   isLoop = true;
+				   showMask();
+				   mcScore.loop();
+				   play();
+				   setLoopButton();
+			    });
+			    
+			    $('#audioCancelLoop').click(function(){
+				   isLoop = false;
+				   cancelLoop();  
+				    
+				});
+
+			    
+			    $('#audioWaitMode').click(function(){
+					$(this).css('color', "red");
+					$('#audioPlayMode').css('color', "black");
+				    mcScore.setMode("WAIT");
+			    });
+
+			    $('#audioPlayMode').click(function(){
+				    $(this).css('color', "red");
+					$('#audioWaitMode').css('color', "black");
+				    mcScore.setMode("PLAY");
+			    });
+			    
+			    $('#audioMetronome').click(function(){
+				    if($(this).css('color') == 'rgb(255, 0, 0)'){
+				      $(this).css('color','black');
+				      mcScore.enableMetronome(false);
+				    }else{
+				      $(this).css('color', "red");
+				      mcScore.enableMetronome(true);
+				    }
+			    });
+			    
+			}
+			
+			function setLoopButton(){
+				if(isLoop){
+					$('#audioCancelLoop').show();
+					$('#audioLoop').hide();
+					$('#audioNoteA').hide();
+					$('#audioNoteB').hide();
+				}else{
+					if(mcScore.getStatus() == 'PLAYING'){
+						$('#audioCancelLoop').hide();
+						$('#audioLoop').hide();
+						$('#audioNoteA').hide();
+						$('#audioNoteB').hide();
+					}else{
+						$('#audioCancelLoop').hide();
+						$('#audioLoop').show();
+						$('#audioNoteA').show();
+						$('#audioNoteB').show();
+					}
+					
+				}
+				
+				if(noteA != null){
+					 $('#audioNoteA').css('color', "red");
+				}else{
+					 $('#audioNoteA').css('color', "black");
+				}
+
+				if(noteB != null){
+					 $('#audioNoteB').css('color', "red");
+				}else{
+					 $('#audioNoteB').css('color', "black");
+				}
+
+				
+				if(noteA != null && noteB != null){
+					$('#audioLoop').removeAttr("disabled");
+				}else{
+					$('#audioLoop').attr("disabled","disabled");
+				}
+				
+			}
+			
+			function cancelLoop(){
+			   isLoop = false;
+			   noteA = null;
+			   noteB = null;
+			   mcScore.cancelLoop();
+			   setLoopButton();
+
+			}
+			
+			function onCount(count) {
+				 var point = getObjWh1( "cd" ); 
+				$('#cd').css( { position: "relative" , left: point.x , top:point.y  } );
+				$('#cd').text(count);
+			}
+			
+			function getObjWh1(obj){    
+				var point={};    
+				var st=$(document).scrollTop();//滚动条距顶部的距离    
+				var sl= $(document).scrollLeft();//滚动条距左边的距离    
+				var ch=$(window).height();//屏幕的高度    
+				var cw=$(window).width();//屏幕的宽度    
+				
+				var objH=$("#"+obj).height();//浮动对象的高度    
+				var objW=$("#"+obj).width();//浮动对象的宽度    
+				
+				var objT=Number(st)+(Number(ch)-Number(objH))/2;    
+				var objL=Number(sl)+(Number(cw)-Number(objW))/2;    
+				point.x = objL ;    
+				point.y = objT;      
+				return point;	
+			}    
+			
+			function play(){
+				$("#audioPause").show();
+				$("#audioPlay").hide();
+				
+				//$('#audioRestart').hide();
+				$('#audioWaitMode').hide();
+				$('#audioPlayMode').hide();
+				$('#audioLeft').hide();
+				$('#audioRight').hide();
+				$('#audioLeftRight').hide();
+				$('#audioNoteA').hide();
+				$('#audioNoteB').hide();
+
+				countdown.setup(3, true, 1000);
+				countdown.start(onCount, function(){
+					$('#cd').text('');
+					console.log("倒计时结束，开始播放");	
+					mcScore.play();
+					/*	
+					if(mcScore.getMode() == "WAIT" && player.type() == "McAudioPlayer"){
+						mcScore.play();
+						waitModeDemo();
+					}else{
+						mcScore.play();
+					}
+					*/
+					setLoopButton();
+					hideMask();			 
+				});
+			}
+			
+			function waitModeDemo(){
+				mcScore.nextFrame();
+				setTimeout(waitModeDemo, 500);
+			}
+	
+			function onNoteClick(note){
+				note.element.setAttribute('fill','green');
+				mcScore.pointToNote(note);
+				curNote = note;
+			}
+			
+			function onNoteOn(note){
+				if(note.staff == 0){
+				   note.element.setAttribute('fill','red');
+				}else{
+				   note.element.setAttribute('fill','blue');
+				}
+				curNote = note;
+				console.log("total time: " + mcScore.getTotalRealTime() + ", current time: " + mcScore.getCurrentRealTime());
+			}
+			
+			function onNoteOff(note){
+				note.element.setAttribute('fill','black');
+			}
+			
+			function onError(msg){
+				//alert(msg);
+			}
+			
+			function onFinish(){
+				$("#audioPlay").show();
+				$("#audioPause").hide();
+				$('#audioWaitMode').show(); 
+				$('#audioPlayMode').show(); 
+				$('#audioRestart').show(); 
+				$('#audioLeft').show();
+				$('#audioRight').show();
+				$('#audioLeftRight').show();
+				setLoopButton();					
+			}
+			
+			//显示遮罩层    
+		    function showMask(){     
+		        $("#mask").css("height",$(document).height());     
+		        $("#mask").css("width",$(document).width());     
+		        $("#mask").show();     
+		    }  
+		    //隐藏遮罩层  
+		    function hideMask(){     
+		          
+		        $("#mask").hide();     
+		    }  
+    
+			function timeLog(msg){
+				//$('#timeLog').text("time: "+msg);	
+			}
+
+			function posLog(msg){
+				//$('#posLog').text("pos: "+msg);	
+			}
+			
+			function userNoteLog(msg){
+				$('#userNoteLog').text("note: "+msg);	
+			}
+			
+			function GetQueryString(name)
+			{
+				var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if(r!=null)return  unescape(r[2]); return null;
+			}
+
+		</script>
+		<div id="nav">
+
+			<button id="audioPlay"  class="scoreButton" > 播放 </button>
+			<button id="audioPause" class="scoreButton" hidden="true"> 暂停 </button>
+			<button id="audioRestart" class="scoreButton" > 从头 </button>
+			<button id="audioRestart2" class="scoreButton" > 从头2 </button>
+			{<button id="audioLeftRight" class="scoreButton" style="color:red" > 双 </button>
+			<button id="audioLeft" class="scoreButton"> 左 </button>
+			<button id="audioRight" class="scoreButton"> 右 </button>} {
+			<button id="audioNoteA" class="scoreButton"> setA </button>
+			<button id="audioNoteB" class="scoreButton"> setB </button>
+			<button id="audioLoop" class="scoreButton" disabled="true" > 循环 </button>
+			<button id="audioCancelLoop" class="scoreButton" hidden="true">  取消循环 </button>} {
+			<button id="audioSpeedUp" class="scoreButton"> + </button>
+			<button id="audioSpeedDown" class="scoreButton"> - </button>}
+			{<button id="audioPlayMode" class="scoreButton" style="color:red" > 欣赏 </button>
+			<button id="audioWaitMode"  class="scoreButton" > 等待 </button>}
+			<button id="audioMetronome" class="scoreButton" > 节拍器 </button>
+			
+			<div id="timeLog" style="font-size:18"></div>
+			<div id="posLog" style="font-size:18" ></div>
+			<div id="userNoteLog" style="font-size:18"></div>
+
+		</div>
+<!--
+			<img id="fullscreen" src="icons/tzym_qp_icon.png"></img>
+	    <div id="audioctrl" width="1600">
+			<audio id="audio"  preload="auto" type="audio/mpeg"  src="./scores/6/score.mp3">
+				Your browser does not support the audio element.
+			</audio>
+		</div>
+	-->
+		
+		<br><br><br>
+		<div id="cd" class="cd"></div>
+		<div id="mask" class="mask"></div> 
+		<div id="score">
+<!--	    <hr  style="height:1px;border:none;border-top:2px solid #555555;" /> -->
+	    </div>
+    </body>
+</html>  

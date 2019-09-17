@@ -1,0 +1,35 @@
+#nav{  
+    position:fixed;   
+    top:0;
+    left:0;
+    width:100%;   
+    _height:80px; 
+    min-height:80px;
+    /*background-color:#000000;*/
+    background:rgba(150, 150, 150, 0.5);
+    /*background-color:rgba(0,0,0,0.8);*/
+    font-size:35px;
+    padding: 0;
+    /*background: #000000; */ 
+}
+
+.scoreButton{
+	height:70px;
+	_width:70px; 
+    min-width:70px;
+	font-size:35px;
+	padding: 10px;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+#fullscreen{  
+    position:fixed;   
+    top:80px;   
+    right:20px;   
+    opacity: 0.6;                    /* Firefox, Safari(WebKit), Opera */  
+    -ms-filter: "alpha(opacity=60)"; /* IE 8 */  
+    filter: alpha(opacity=60);       /* IE 4-7 */  
+    zoom: 1;/* set "zoom", "width" or "height" to trigger "hasLayout" in IE 7 and lower */  
+
+    /*background: #FFFFFF;  */
+} 

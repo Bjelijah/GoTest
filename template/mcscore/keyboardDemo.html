@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable = no,maximum-scale=1.0" />
+		
+		<title>keyboardDemo</title>
+		
+		<link rel="stylesheet" href="css/cs-select.css" />
+        <link rel="stylesheet" href="css/cs-skin-elastic.css" />
+		<link rel="stylesheet" href="css/keyboard.css" />
+		<link rel="stylesheet" href="css/theme_black.css" />
+		<link rel="stylesheet" href="css/theme_real.css" />
+		<link rel="stylesheet" href="css/keyboardDemo.css" />
+		<link rel="stylesheet" href="css/waterfall.css" />
+		
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+        <script type="text/javascript" src="js/McAudioPlayer.js"></script>  
+        <script type="text/javascript" src="js/bufferaudio.js"></script>  
+        <script type="text/javascript" src="js/McAudioContext.js"></script>  
+        <script type="text/javascript" src="js/McMidiPlayer.js"></script>
+        <script type="text/javascript" src="js/McMetronome.js" ></script>
+        <script type="text/javascript" src="js/McJsBridge.js"></script>          
+        <script type="text/javascript" src="js/McScore.js"></script>  
+        <script type="text/javascript" src="js/McCountDown.js" ></script>
+        
+		<script type="text/javascript" src="js/BufferLoader.js" ></script>
+		<script type="text/javascript" src="js/pianoSource.js" ></script>
+		<script type="text/javascript" src="js/McKeyboard.js" ></script>
+		<script type="text/javascript" src="js/McKeyboardView.js" ></script>
+		
+		<script type="text/javascript" src="js/McWaterfall.js" ></script>
+		<script type="text/javascript" src="js/McWaterfallView.js" ></script>
+		
+		<script type="text/javascript" src="js/classie.js"></script>
+        <script type="text/javascript" src="js/selectFx.js"></script>
+		<script type="text/javascript" src="js/keyboardDemo.js" ></script>
+	</head>
+	<body>
+		<div class="game">
+	    		<button class="btn_back"></button>
+			<div class="toolbar">
+				<div class="buttons">
+					<button class="btn_play" id="audioPlay">播放</button>
+					<button class="btn_pause" id="audioPause">暂停</button>
+					<button class="btn_restart" id="audioRestart">重新开始</button>
+					<button class="btn_speed" id="bpmChange">速度调整</button>
+					<div class="select btn_hands">
+						<button>左右手</button>
+						<select class="cs-select cs-skin-elastic" id="hands">
+							<option value="left">左手</option>
+							<option value="right">右手</option>
+							<option value="both" selected>双手</option>
+						</select>
+					</div>
+					<div class="select btn_mode">
+						<button>弹奏模式</button>
+						<select class="cs-select cs-skin-elastic"  id="mode">
+							<option value="play" selected>欣赏</option>
+							<option value="wait">跟弹</option>
+							<option value="reading">识谱</option>
+							<option value="contest">竞赛</option>
+						</select>
+					</div>
+					<button class="btn_ranking" id="ranking">本曲排名</button>
+				</div>
+				
+				<div class="panel_speed">
+					<span class="speed">曲谱速度<br/><span id="bpm">120bpm</span></span>
+					<span class="reduce" id="bpmReduce"></span>
+					<span class="range"><input id="bpmRange" type="range" value="120" min="30" max="260" step="1" /></span>
+					<span class="raise" id="bpmRaise"></span>
+				</div>
+			</div>
+			
+			<div class="waterfall" id="waterfall"></div>
+			<div class="keyboard theme_real" id="keyboard"></div>
+			<div id="cd" class="cd"></div>
+			<div id="mask" class="bg_mask"></div>
+		</div>
+	</body>
+</html>

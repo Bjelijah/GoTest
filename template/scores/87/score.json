@@ -1,0 +1,114 @@
+{"s":1, "p":1, "p_w":595.44, "p_h":841.68, "staves":[
+{"measures":[
+{"id":293, "timesig":[4,4], "len":[4,4] ,"tick":[0,1920], "time":[0,2000] ,"notes":[
+{"id":236, "times":0, "line":17, "pitch":48, "velo":80, "ontime":0, "offtime":0.475, "ontick":0, "offtick":455, "x":76.434, "y": 155.847, "w":6.58282, "h": 5.50938},
+{"id":235, "times":0, "line":17, "pitch":49, "velo":80, "ontime":0.5, "offtime":0.975, "ontick":480, "offtick":935, "x":95.8995, "y": 155.847, "w":6.58282, "h": 5.50938},
+{"id":234, "times":0, "line":16, "pitch":50, "velo":80, "ontime":1, "offtime":1.475, "ontick":960, "offtick":1415, "x":115.365, "y": 153.347, "w":6.58282, "h": 5.50938},
+{"id":233, "times":0, "line":15, "pitch":51, "velo":80, "ontime":1.5, "offtime":1.975, "ontick":1440, "offtick":1895, "x":134.83, "y": 150.847, "w":6.58282, "h": 5.50938}]
+},
+{"id":292, "timesig":[4,4], "len":[4,4] ,"tick":[1920,3840], "time":[2000,4000] ,"notes":[
+{"id":232, "times":0, "line":15, "pitch":52, "velo":80, "ontime":2, "offtime":2.475, "ontick":1920, "offtick":2375, "x":161.096, "y": 150.847, "w":6.58282, "h": 5.50938},
+{"id":231, "times":0, "line":14, "pitch":53, "velo":80, "ontime":2.5, "offtime":2.975, "ontick":2400, "offtick":2855, "x":180.703, "y": 148.347, "w":6.58282, "h": 5.50938},
+{"id":230, "times":0, "line":14, "pitch":54, "velo":80, "ontime":3, "offtime":3.475, "ontick":2880, "offtick":3335, "x":200.31, "y": 148.347, "w":6.58282, "h": 5.50938},
+{"id":229, "times":0, "line":13, "pitch":55, "velo":80, "ontime":3.5, "offtime":3.975, "ontick":3360, "offtick":3815, "x":219.917, "y": 145.847, "w":6.58282, "h": 5.50938}]
+},
+{"id":291, "timesig":[4,4], "len":[4,4] ,"tick":[3840,5760], "time":[4000,6000] ,"notes":[
+{"id":228, "times":0, "line":13, "pitch":56, "velo":80, "ontime":4, "offtime":4.475, "ontick":3840, "offtick":4295, "x":250.531, "y": 145.847, "w":6.58282, "h": 5.50938},
+{"id":227, "times":0, "line":12, "pitch":57, "velo":80, "ontime":4.5, "offtime":4.975, "ontick":4320, "offtick":4775, "x":269.49, "y": 143.347, "w":6.58282, "h": 5.50938},
+{"id":226, "times":0, "line":11, "pitch":58, "velo":80, "ontime":5, "offtime":5.475, "ontick":4800, "offtick":5255, "x":288.448, "y": 140.847, "w":6.58282, "h": 5.50938},
+{"id":225, "times":0, "line":11, "pitch":59, "velo":80, "ontime":5.5, "offtime":5.975, "ontick":5280, "offtick":5735, "x":307.406, "y": 140.847, "w":6.58282, "h": 5.50938}]
+},
+{"id":290, "timesig":[4,4], "len":[4,4] ,"tick":[5760,7680], "time":[6000,8000] ,"notes":[
+{"id":224, "times":0, "line":10, "pitch":60, "velo":80, "ontime":6, "offtime":6.475, "ontick":5760, "offtick":6215, "x":333.164, "y": 138.347, "w":6.58282, "h": 5.50938},
+{"id":223, "times":0, "line":10, "pitch":61, "velo":80, "ontime":6.5, "offtime":6.975, "ontick":6240, "offtick":6695, "x":352.429, "y": 138.347, "w":6.58282, "h": 5.50938},
+{"id":222, "times":0, "line":9, "pitch":62, "velo":80, "ontime":7, "offtime":7.475, "ontick":6720, "offtick":7175, "x":371.695, "y": 135.847, "w":6.58282, "h": 5.50938},
+{"id":221, "times":0, "line":8, "pitch":63, "velo":80, "ontime":7.5, "offtime":7.975, "ontick":7200, "offtick":7655, "x":390.96, "y": 133.347, "w":6.58282, "h": 5.50938}]
+},
+{"id":289, "timesig":[4,4], "len":[4,4] ,"tick":[7680,9600], "time":[8000,10000] ,"notes":[
+{"id":220, "times":0, "line":8, "pitch":64, "velo":80, "ontime":8, "offtime":8.475, "ontick":7680, "offtick":8135, "x":417.026, "y": 133.347, "w":6.58282, "h": 5.50938},
+{"id":219, "times":0, "line":7, "pitch":65, "velo":80, "ontime":8.5, "offtime":8.975, "ontick":8160, "offtick":8615, "x":434.383, "y": 130.847, "w":6.58282, "h": 5.50938},
+{"id":218, "times":0, "line":7, "pitch":66, "velo":80, "ontime":9, "offtime":9.475, "ontick":8640, "offtick":9095, "x":451.74, "y": 130.847, "w":6.58282, "h": 5.50938},
+{"id":217, "times":0, "line":6, "pitch":67, "velo":80, "ontime":9.5, "offtime":9.975, "ontick":9120, "offtick":9575, "x":469.097, "y": 128.347, "w":6.58282, "h": 5.50938}]
+},
+{"id":288, "timesig":[4,4], "len":[4,4] ,"tick":[9600,11520], "time":[10000,12000] ,"notes":[
+{"id":216, "times":0, "line":6, "pitch":68, "velo":80, "ontime":10, "offtime":10.475, "ontick":9600, "offtick":10055, "x":496.461, "y": 128.347, "w":6.58282, "h": 5.50938},
+{"id":215, "times":0, "line":5, "pitch":69, "velo":80, "ontime":10.5, "offtime":10.975, "ontick":10080, "offtick":10535, "x":513.919, "y": 125.847, "w":6.58282, "h": 5.50938},
+{"id":214, "times":0, "line":4, "pitch":70, "velo":80, "ontime":11, "offtime":11.475, "ontick":10560, "offtick":11015, "x":531.377, "y": 123.347, "w":6.58282, "h": 5.50938},
+{"id":213, "times":0, "line":4, "pitch":71, "velo":80, "ontime":11.5, "offtime":11.975, "ontick":11040, "offtick":11495, "x":548.835, "y": 123.347, "w":6.58282, "h": 5.50938}]
+},
+{"id":287, "timesig":[4,4], "len":[4,4] ,"tick":[11520,13440], "time":[12000,14000] ,"notes":[
+{"id":212, "times":0, "line":3, "pitch":72, "velo":80, "ontime":12, "offtime":12.475, "ontick":11520, "offtick":11975, "x":63.384, "y": 215.847, "w":6.58282, "h": 5.50938},
+{"id":211, "times":0, "line":3, "pitch":73, "velo":80, "ontime":12.5, "offtime":12.975, "ontick":12000, "offtick":12455, "x":78.9246, "y": 215.847, "w":6.58282, "h": 5.50938},
+{"id":210, "times":0, "line":2, "pitch":74, "velo":80, "ontime":13, "offtime":13.475, "ontick":12480, "offtick":12935, "x":94.3723, "y": 213.347, "w":6.58282, "h": 5.50938},
+{"id":209, "times":0, "line":1, "pitch":75, "velo":80, "ontime":13.5, "offtime":13.975, "ontick":12960, "offtick":13415, "x":109.82, "y": 210.847, "w":6.58282, "h": 5.50938}]
+},
+{"id":286, "timesig":[4,4], "len":[4,4] ,"tick":[13440,15360], "time":[14000,16000] ,"notes":[
+{"id":208, "times":0, "line":1, "pitch":76, "velo":80, "ontime":14, "offtime":14.475, "ontick":13440, "offtick":13895, "x":132.068, "y": 210.847, "w":6.58282, "h": 5.50938},
+{"id":207, "times":0, "line":0, "pitch":77, "velo":80, "ontime":14.5, "offtime":14.975, "ontick":13920, "offtick":14375, "x":146.704, "y": 208.347, "w":6.58282, "h": 5.50938},
+{"id":206, "times":0, "line":0, "pitch":78, "velo":80, "ontime":15, "offtime":15.475, "ontick":14400, "offtick":14855, "x":162.244, "y": 208.347, "w":6.58282, "h": 5.50938},
+{"id":205, "times":0, "line":-1, "pitch":79, "velo":80, "ontime":15.5, "offtime":15.975, "ontick":14880, "offtick":15335, "x":176.881, "y": 205.847, "w":6.58282, "h": 5.50938}]
+},
+{"id":285, "timesig":[4,4], "len":[4,4] ,"tick":[15360,17280], "time":[16000,18000] ,"notes":[
+{"id":204, "times":0, "line":-1, "pitch":80, "velo":80, "ontime":16, "offtime":16.475, "ontick":15360, "offtick":15815, "x":201.525, "y": 205.847, "w":6.58282, "h": 5.50938},
+{"id":203, "times":0, "line":-2, "pitch":81, "velo":80, "ontime":16.5, "offtime":16.975, "ontick":15840, "offtick":16295, "x":216.987, "y": 203.347, "w":6.58282, "h": 5.50938},
+{"id":202, "times":0, "line":-3, "pitch":82, "velo":80, "ontime":17, "offtime":17.475, "ontick":16320, "offtick":16775, "x":232.454, "y": 200.847, "w":6.58282, "h": 5.50938},
+{"id":201, "times":0, "line":-3, "pitch":83, "velo":80, "ontime":17.5, "offtime":17.975, "ontick":16800, "offtick":17255, "x":247.916, "y": 200.847, "w":6.58282, "h": 5.50938}]
+},
+{"id":284, "timesig":[4,4], "len":[4,4] ,"tick":[17280,19200], "time":[18000,20000] ,"notes":[
+{"id":200, "times":0, "line":-4, "pitch":84, "velo":80, "ontime":18, "offtime":18.475, "ontick":17280, "offtick":17735, "x":270.179, "y": 198.347, "w":6.58282, "h": 5.50938},
+{"id":199, "times":0, "line":-4, "pitch":85, "velo":80, "ontime":18.5, "offtime":18.975, "ontick":17760, "offtick":18215, "x":288.199, "y": 198.347, "w":6.58282, "h": 5.50938},
+{"id":198, "times":0, "line":-5, "pitch":86, "velo":80, "ontime":19, "offtime":19.475, "ontick":18240, "offtick":18695, "x":306.22, "y": 195.847, "w":6.58282, "h": 5.50938},
+{"id":197, "times":0, "line":-6, "pitch":87, "velo":80, "ontime":19.5, "offtime":19.975, "ontick":18720, "offtick":19175, "x":324.241, "y": 193.347, "w":6.58282, "h": 5.50938}]
+},
+{"id":283, "timesig":[4,4], "len":[4,4] ,"tick":[19200,21120], "time":[20000,22000] ,"notes":[
+{"id":196, "times":0, "line":-6, "pitch":88, "velo":80, "ontime":20, "offtime":20.475, "ontick":19200, "offtick":19655, "x":349.062, "y": 193.347, "w":6.58282, "h": 5.50938},
+{"id":195, "times":0, "line":-7, "pitch":89, "velo":80, "ontime":20.5, "offtime":20.975, "ontick":19680, "offtick":20135, "x":366.175, "y": 190.847, "w":6.58282, "h": 5.50938},
+{"id":194, "times":0, "line":-7, "pitch":90, "velo":80, "ontime":21, "offtime":21.475, "ontick":20160, "offtick":20615, "x":383.287, "y": 190.847, "w":6.58282, "h": 5.50938},
+{"id":193, "times":0, "line":-8, "pitch":91, "velo":80, "ontime":21.5, "offtime":21.975, "ontick":20640, "offtick":21095, "x":400.399, "y": 188.347, "w":6.58282, "h": 5.50938}]
+},
+{"id":282, "timesig":[4,4], "len":[4,4] ,"tick":[21120,23040], "time":[22000,24000] ,"notes":[
+{"id":192, "times":0, "line":-8, "pitch":92, "velo":80, "ontime":22, "offtime":22.475, "ontick":21120, "offtick":21575, "x":428.519, "y": 188.347, "w":6.58282, "h": 5.50938},
+{"id":191, "times":0, "line":-9, "pitch":93, "velo":80, "ontime":22.5, "offtime":22.975, "ontick":21600, "offtick":22055, "x":444.983, "y": 185.847, "w":6.58282, "h": 5.50938},
+{"id":190, "times":0, "line":-10, "pitch":94, "velo":80, "ontime":23, "offtime":23.475, "ontick":22080, "offtick":22535, "x":461.446, "y": 183.347, "w":6.58282, "h": 5.50938},
+{"id":189, "times":0, "line":-10, "pitch":95, "velo":80, "ontime":23.5, "offtime":23.975, "ontick":22560, "offtick":23015, "x":477.91, "y": 183.347, "w":6.58282, "h": 5.50938}]
+},
+{"id":281, "timesig":[4,4], "len":[4,4] ,"tick":[23040,24960], "time":[24000,26000] ,"notes":[]
+},
+{"id":280, "timesig":[4,4], "len":[4,4] ,"tick":[24960,26880], "time":[26000,28000] ,"notes":[]
+},
+{"id":279, "timesig":[4,4], "len":[4,4] ,"tick":[26880,28800], "time":[28000,30000] ,"notes":[]
+},
+{"id":278, "timesig":[4,4], "len":[4,4] ,"tick":[28800,30720], "time":[30000,32000] ,"notes":[]
+},
+{"id":277, "timesig":[4,4], "len":[4,4] ,"tick":[30720,32640], "time":[32000,34000] ,"notes":[]
+},
+{"id":276, "timesig":[4,4], "len":[4,4] ,"tick":[32640,34560], "time":[34000,36000] ,"notes":[]
+},
+{"id":275, "timesig":[4,4], "len":[4,4] ,"tick":[34560,36480], "time":[36000,38000] ,"notes":[]
+},
+{"id":274, "timesig":[4,4], "len":[4,4] ,"tick":[36480,38400], "time":[38000,40000] ,"notes":[]
+},
+{"id":273, "timesig":[4,4], "len":[4,4] ,"tick":[38400,40320], "time":[40000,42000] ,"notes":[]
+},
+{"id":272, "timesig":[4,4], "len":[4,4] ,"tick":[40320,42240], "time":[42000,44000] ,"notes":[]
+},
+{"id":271, "timesig":[4,4], "len":[4,4] ,"tick":[42240,44160], "time":[44000,46000] ,"notes":[]
+},
+{"id":270, "timesig":[4,4], "len":[4,4] ,"tick":[44160,46080], "time":[46000,48000] ,"notes":[]
+},
+{"id":269, "timesig":[4,4], "len":[4,4] ,"tick":[46080,48000], "time":[48000,50000] ,"notes":[]
+},
+{"id":268, "timesig":[4,4], "len":[4,4] ,"tick":[48000,49920], "time":[50000,52000] ,"notes":[]
+},
+{"id":267, "timesig":[4,4], "len":[4,4] ,"tick":[49920,51840], "time":[52000,54000] ,"notes":[]
+},
+{"id":266, "timesig":[4,4], "len":[4,4] ,"tick":[51840,53760], "time":[54000,56000] ,"notes":[]
+},
+{"id":265, "timesig":[4,4], "len":[4,4] ,"tick":[53760,55680], "time":[56000,58000] ,"notes":[]
+},
+{"id":264, "timesig":[4,4], "len":[4,4] ,"tick":[55680,57600], "time":[58000,60000] ,"notes":[]
+},
+{"id":263, "timesig":[4,4], "len":[4,4] ,"tick":[57600,59520], "time":[60000,62000] ,"notes":[]
+},
+{"id":262, "timesig":[4,4], "len":[4,4] ,"tick":[59520,61440], "time":[62000,64000] ,"notes":[]
+}]}]}

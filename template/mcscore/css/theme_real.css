@@ -1,0 +1,17 @@
+.theme_real { background-color: transparent; }
+.theme_real .header { background-color: #251f3b;}
+.theme_real .miniature { background: url(../img/piano_thumbnail.png) no-repeat center; background-size: 100% 100%; }
+.theme_real .last_octave { background: url(../icons/piano_last_octave.png) no-repeat center; background-size: cover; }
+.theme_real .last_note { background: url(../icons/piano_last_note.png) no-repeat center; background-size: cover; }
+.theme_real .next_note { background: url(../icons/piano_next_note.png) no-repeat center; background-size: cover; }
+.theme_real .next_octave { background: url(../icons/piano_next_octave.png) no-repeat center; background-size: cover; }
+
+.theme_real .keys_area { background-color: #251f3b;}
+.theme_real .key_white { background: url(../img/key_white.png) no-repeat; background-size: 100% 100%;}
+.theme_real .key_white.hover { box-shadow: 0.1rem 0 0.5rem rgba(0,0,0,0.5) inset, -0.1rem 0 0.5rem rgba(0,0,0,0.5) inset;
+							   -webkit-box-shadow: 0.1rem 0 0.6rem rgba(0,0,0,0.5) inset, -0.1rem 0 0.6rem rgba(0,0,0,0.5) inset;}
+.theme_real .key_black { background: url(../img/key_black.png) no-repeat; background-size: 100% 100%;}
+.theme_real .key_black.hover { box-shadow: 0.1rem 0 0.5rem rgba(255,255,255,0.5) inset, -0.1rem 0 0.5rem rgba(255,255,255,0.5) inset;
+							   -webkit-box-shadow: 0.1rem 0 0.6rem rgba(255,255,255,0.5) inset, -0.1rem 0 0.6rem rgba(255,255,255,0.5) inset;}
+.theme_real .light { position: absolute; bottom: 0.1rem; left: 0; border-radius: 30px; }
+.theme_real .keyname {color: #dbdae0;}

@@ -1,0 +1,50 @@
+.waterfall .content {height: 100%; position: relative; top: 0;}
+.waterfall_view {position: relative; height: 100%;}
+
+.item {position: absolute; height: 100%; text-align: center;}
+
+.hint { position: absolute; top: 0; background: -webkit-linear-gradient(top,rgba(255,255,255,0),rgba(255,255,255,1)); display: inline-block;}
+
+.block { position: absolute;}
+.block.key_white { background-color: #ff6096;}
+.block.key_black { background-color: #9f53e0;}
+.block span { float: left;}
+
+.ball { position: absolute; border-radius: 100px; }
+.ball.key_white { background: #ed506d url(../img/icon_note.png) no-repeat center; background-size: 50% 50%;}
+.ball.key_black { background: #a55ce1 url(../img/icon_note.png) no-repeat center; background-size: 50% 50%;}
+
+.hit { position: absolute; bottom: 0; height: 20px; z-index: 10;
+	   background: url(../img/hit.png) no-repeat center bottom; background-size: contain;
+	   -webkit-animation: scaleout 0.15s infinite;animation: scaleout 0.15s infinite;}
+	   
+.key_hits {position: fixed; height: 30px; bottom:40%}	
+   
+.hit3 { position: absolute; height: 30px; bottom:0px; z-index: 10;
+	   background: url(../img/hit.png) no-repeat center bottom; background-size: contain;
+	   -webkit-animation: scaleout 0.15s infinite;animation: scaleout 0.15s infinite;}
+
+/*
+.hit.block { position: absolute; bottom: 0; height: 8px; z-index: 10;
+	   		 background: url(../icons/hit.gif) no-repeat center; background-size: cover;}
+.hit.ball { position: absolute; bottom: 0; z-index: 10;
+			background: url(../icons/hit_02.png) no-repeat center; background-size: cover;
+			-webkit-animation: scaleout 1.3s ease-in-out;animation: scaleout 1.3s ease-in-out; 
+			-webkit-animation-fill-mode: forwards; animation-fill-mode : forwards;}
+*/
+
+@-webkit-keyframes scaleout {
+    0% { -webkit-transform: scale(1.0);}
+    100% {
+        -webkit-transform: scale(1.2);
+    }
+}
+@keyframes scaleout {
+    0% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    } 100% {
+          transform: scale(1.2);
+          -webkit-transform: scale(1.2);
+    }
+}

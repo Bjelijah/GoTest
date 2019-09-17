@@ -1,0 +1,45 @@
+#levels {
+  overflow-y: hidden;
+  height: 100%;
+  background: url(../img/background.png) no-repeat center;
+  background-size: 100% 100%;
+}
+#levels .wrapper {
+  margin: 0 auto;
+  width: 15.6rem;
+}
+#levels .rounded_rectangle {
+  width: 100%;
+  height: 1.76rem;
+  line-height: 1.76rem;
+  border-radius: 0.88rem;
+  color: #fff;
+  text-align: center;
+  font-size: 0.72rem;
+  box-sizing: border-box;
+}
+#levels .header {
+  padding: 2rem 0;
+}
+#levels .content {
+  overflow-y: auto;
+  height: 65%;
+}
+#levels .content ul {
+  overflow: hidden;
+}
+#levels .content li {
+  margin-bottom: 1rem;
+}
+#levels .content a {
+  display: block;
+  color: #fff;
+  padding-left: 3.4rem;
+  text-align: left;
+}
+#levels .content .level {
+  margin-right: 1rem;
+}
+#levels .content::-webkit-scrollbar {
+  display: none;
+}
